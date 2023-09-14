@@ -1,5 +1,5 @@
 <?php
-    header("Content-type: application/json");
+    header("Content-type: Application/json");
     
     require 'koneksi.php';
 
