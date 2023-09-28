@@ -16,7 +16,7 @@
             $data_list = array();
             foreach ($query_checking as $data) {
 
-               array_push($data_lis,array(
+               array_push($data_list,array(
                     'id'             => $data['id'],
                     'id_user'             => $data['id_user'],
                     'id_produk'             => $data['id_produk'],
