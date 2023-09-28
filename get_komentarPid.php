@@ -9,7 +9,7 @@
         // checking username if already exist
         $id_produk = $_GET['id_produk'];
 
-        $query_checking = $koneksi->query("SELECT * FROM `ulasan` ORDER BY `ulasan`.`create_at` DESC WHERE id_produk = '$id_produk'");
+        $query_checking = $koneksi->query("SELECT * FROM `ulasan` WHERE id_produk = '$id_produk' ORDER BY `create_at` DESC");
 
         if($query_checking->num_rows > 0) {
             $data_list = array();
