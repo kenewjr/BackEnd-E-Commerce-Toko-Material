@@ -14,15 +14,15 @@
         $updated_at = date("Y-m-d H:i:s");
 
 
-        $sql_id_berita = $koneksi->query("SELECT AUTO_INCREMENT FROM  INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'material' AND TABLE_NAME = 'produk'");
+        $sql_id_berita = $koneksi->query("SELECT AUTO_INCREMENT FROM  INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'project_abrar' AND TABLE_NAME = 'produk'");
         $id_berita = $sql_id_berita->fetch_assoc()['AUTO_INCREMENT'];
         
         $thumbnail = $_POST['gambar'];
         $filename = "thumbnail_berita_".$id_berita.".jpg";
         file_put_contents("uploads/".$filename,base64_decode($thumbnail));
 
-        $query_add = $koneksi->query("INSERT INTO produk (nama_produk, deskripsi,kategori_produk, stok, harga, gambar, create_at, update_at)
-         VALUES ('$nama_produk','$deskripsi', '$kategori_produk', '$stok', '$harga', '$thumbnail', '$created_at', '$updated_at')");
+        $query_add = $koneksi->query("INSERT INTO produk (nama_produk, deskripsi,kategori_produk, stok, harga, gambar, create_at, update_at, viewer)
+         VALUES ('$nama_produk','$deskripsi', '$kategori_produk', '$stok', '$harga', '$thumbnail', '$created_at', '$updated_at','0')");
 
         if($query_add) {
             http_response_code(200);

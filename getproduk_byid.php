@@ -27,7 +27,7 @@
                     echo json_encode(array(
                         'id'             => $data['id'],
                         'nama_produk'             => $data['nama_produk'],
-                        'gambar'         => 'http://192.168.1.150/skripsi/uploads/thumbnail_berita_'. $data['id'].'.jpg', 
+                        'gambar'         => 'https://dev.vzcyberd.cloud/abrar/API/uploads/thumbnail_berita_'. $data['id'].'.jpg', 
                         'deskripsi'                 => $data['deskripsi'],
                         'harga'                   => $data['harga'],
                         'kategori'              => $data_kategori['name'],
@@ -37,7 +37,6 @@
                         'viewer'              => $data['viewer']
                     ));
                 }
-                http_response_code(200);
             } else {
                 http_response_code(404);
                 echo json_encode(array('message' => 'data not found'));

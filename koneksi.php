@@ -2,9 +2,9 @@
 
 
 $host = "localhost";
-$username = "root";
-$password = "";
-$dbname = "material";
+$username = "abrar";
+$password = "abrar";
+$dbname = "project_abrar";
 
 $koneksi = new mysqli($host,$username,$password,$dbname);
 if($koneksi->error){

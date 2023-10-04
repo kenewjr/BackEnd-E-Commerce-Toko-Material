@@ -19,7 +19,7 @@
                 array_push($data_list, array(
                     'id'             => $data['id'],
                     'nama_produk'             => $data['nama_produk'],
-                    'gambar'         => 'http://192.168.1.150/skripsi/uploads/thumbnail_berita_'. $data['id'].'.jpg', 
+                    'gambar'         => 'https://dev.vzcyberd.cloud/abrar/API/uploads/thumbnail_berita_'. $data['id'].'.jpg', 
                     'deskripsi'                 => $data['deskripsi'],
                     'harga'                   => $data['harga'],
                     'kategori'              => $data_kategori['name'],
