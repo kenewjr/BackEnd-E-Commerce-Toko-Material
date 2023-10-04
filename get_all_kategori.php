@@ -22,5 +22,4 @@
             echo json_encode(array('message' => 'data not found'));
             
         }
-    }    
-?>
+    }

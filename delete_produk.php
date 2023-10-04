@@ -1,29 +1,28 @@
 <?php
-    header("Content-type: Application/json");
-    
-    require 'koneksi.php';
+header("Content-type: Application/json");
 
-    if($_SERVER['REQUEST_METHOD']=='POST'){
+require 'koneksi.php';
 
-        $delete = $_POST['delete']; 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-      if ($delete == "produk") {
-            $id_produk = $_POST['id'];
-            $files = getcwd().'/uploads/thumbnail_berita_'.$id_produk.'.jpg';
-            if (unlink($files)) {                
-                $query = $koneksi->query("DELETE FROM produk WHERE id = '$id_produk'");
-                if ($query) {
-                    http_response_code(200);
-                    echo json_encode(array('message' => 'success'));
-                } else {                
-                    http_response_code(500);
-                    echo json_encode(array('message' => 'error'));
-                }
+    $delete = $_POST['delete'];
+
+    if ($delete == "produk") {
+        $id_produk = $_POST['id'];
+        $files = getcwd() . '/uploads/thumbnail_berita_' . $id_produk . '.jpg';
+        if (unlink($files)) {
+            $query = $koneksi->query("DELETE FROM produk WHERE id = '$id_produk'");
+            if ($query) {
+                http_response_code(200);
+                echo json_encode(array('message' => 'success'));
             } else {
                 http_response_code(500);
                 echo json_encode(array('message' => 'error'));
             }
-            // echo json_encode(array("your location is" => $files));           
+        } else {
+            http_response_code(500);
+            echo json_encode(array('message' => 'error'));
         }
-    }    
-?>
+        // echo json_encode(array("your location is" => $files));           
+    }
+}
