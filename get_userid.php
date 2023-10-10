@@ -22,6 +22,7 @@
                     'username' => $data['username'],
                     'password' => $data['password'],
                     'nama'     => $data['nama'],
+               		 'status' => $data['status'],
                     'nohp'     => $data['nohp'],
                     'alamat'   => $data['alamat']
                 ));

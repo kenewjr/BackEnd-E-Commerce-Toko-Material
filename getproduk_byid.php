@@ -31,6 +31,7 @@
                         'deskripsi'                 => $data['deskripsi'],
                         'harga'                   => $data['harga'],
                         'kategori'              => $data_kategori['name'],
+                    	'kategori_id'     => $data['kategori_produk'],
                         'stok'              => $data['stok'],
                         'create_at'              => $data['create_at'],
                         'update_at'              => $data['update_at'],

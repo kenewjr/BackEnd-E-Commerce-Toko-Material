@@ -18,6 +18,7 @@
                     'password'  => $data['password'],
                     'nama' => $data['nama'], 
                     'nohp' => $data['nohp'],    
+                	'status' => $data['status'],
                     'alamat' => $data['alamat']                 
                 ));
             }

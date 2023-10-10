@@ -22,6 +22,7 @@
                     'payload' => array(
                         "username" => $data['username'],
                         "nama" => $data['nama'],
+                    	'status' => $data['status'],
                         "id" => $data['id']
                 )
                     )

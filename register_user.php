@@ -20,7 +20,7 @@
             http_response_code(409);
             echo json_encode(array('message' => 'username already exist'));
         } else {
-            $query = $koneksi->query("INSERT INTO `user` (`username`, `password`, `nama`,`nohp`,`alamat`,`date`) VALUES ('$username','$password','$nama','$nohp','$alamat','$dateNow')");
+            $query = $koneksi->query("INSERT INTO `user` (`username`, `password`, `nama`,`nohp`,`alamat`,`date`,'status') VALUES ('$username','$password','$nama','$nohp','$alamat','$dateNow','buyer')");
             if ($query) {
                 http_response_code(200);
                 echo json_encode(array('message' => 'success'));
