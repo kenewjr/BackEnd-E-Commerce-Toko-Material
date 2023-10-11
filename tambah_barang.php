@@ -9,6 +9,7 @@
         $kategori_produk = $_POST['kategori_produk'];
         $stok = $_POST['stok'];
         $harga = $_POST['harga'];
+    	$berat = $_POST['berat'];
         $deskripsi = $_POST['deskripsi'];
         $created_at = date("Y-m-d H:i:s");
         $updated_at = date("Y-m-d H:i:s");
@@ -21,8 +22,8 @@
         $filename = "thumbnail_berita_".$id_berita.".jpg";
         file_put_contents("uploads/".$filename,base64_decode($thumbnail));
 
-        $query_add = $koneksi->query("INSERT INTO produk (nama_produk, deskripsi,kategori_produk, stok, harga, gambar, create_at, update_at, viewer)
-         VALUES ('$nama_produk','$deskripsi', '$kategori_produk', '$stok', '$harga', '$thumbnail', '$created_at', '$updated_at','0')");
+        $query_add = $koneksi->query("INSERT INTO produk (nama_produk, deskripsi,kategori_produk, stok, harga,berat, gambar, create_at, update_at, viewer)
+         VALUES ('$nama_produk','$deskripsi', '$kategori_produk', '$stok', '$harga','$berat', '$thumbnail', '$created_at', '$updated_at','0')");
 
         if($query_add) {
             http_response_code(200);

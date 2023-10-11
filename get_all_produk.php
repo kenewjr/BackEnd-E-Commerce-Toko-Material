@@ -22,6 +22,7 @@
                     'gambar'         => 'https://dev.vzcyberd.cloud/abrar/API/uploads/thumbnail_berita_'. $data['id'].'.jpg', 
                     'deskripsi'                 => $data['deskripsi'],
                     'harga'                   => $data['harga'],
+               		'berat'                 => $data['berat'],
                     'kategori'              => $data_kategori['name'],
                     'stok'              => $data['stok'],
                     'create_at'              => $data['create_at'],

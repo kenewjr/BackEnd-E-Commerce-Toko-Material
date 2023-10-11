@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     'id_produk' => $data['id_produk'],
                 	'order_id' => $data['order_id'],
                     'nama_pembeli' => $data['nama_pembeli'],
+               		'alamat'       =>$data['alamat'],
                     'tgl_transaksi' => $data['tgl_transaksi'],
                     'nama_produk' => $data['nama_produk'],
                     'harga_produk' => $data['harga_produk'],
