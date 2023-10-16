@@ -3,7 +3,7 @@
 
 $host = "localhost";
 $username = "abrar";
-$password = "abrar";
+$password = "abrar12345";
 $dbname = "project_abrar";
 
 $koneksi = new mysqli($host,$username,$password,$dbname);
