@@ -24,7 +24,8 @@
                     'nama'     => $data['nama'],
                		 'status' => $data['status'],
                     'nohp'     => $data['nohp'],
-                    'alamat'   => $data['alamat']
+                    'alamat'   => $data['alamat'],
+                    'email' => $data['email'],
                 ));
             } else {
                 http_response_code(404);

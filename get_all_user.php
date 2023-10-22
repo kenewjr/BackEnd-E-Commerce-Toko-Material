@@ -19,7 +19,8 @@
                     'nama' => $data['nama'], 
                     'nohp' => $data['nohp'],    
                 	'status' => $data['status'],
-                    'alamat' => $data['alamat']                 
+                    'alamat' => $data['alamat'],
+                    'email' => $data['email']            
                 ));
             }
             echo json_encode(array('data_user' => $data_list));
