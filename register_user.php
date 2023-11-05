@@ -11,6 +11,8 @@
         $email = $_POST['email'];
         $nohp = $_POST['nohp'];
         $alamat = $_POST['alamat'];
+        $kota = $_POST['kota'];
+        $kodepos = $_POST['kodepos'];
         $dateNow = date("Y-m-d h:i:s");
 
         // checking username if already exist
@@ -21,7 +23,8 @@
             http_response_code(409);
             echo json_encode(array('message' => 'username already exist'));
         } else {
-            $query = $koneksi->query("INSERT INTO `user` (`username`, `password`, `nama`,`nohp`,`alamat`,`email`,`date`,'status') VALUES ('$username','$password','$nama','$nohp','$alamat','$email','$dateNow','buyer')");
+            $query = $koneksi->query("INSERT INTO `user` (`username`, `password`, `nama`,`nohp`,`alamat`,`kota`,`kodepos`,`email`,`date`,`status`) 
+            VALUES ('$username','$password','$nama','$nohp','$alamat','$kota','$kodepos','$email','$dateNow','buyer')");
             if ($query) {
                 http_response_code(200);
                 echo json_encode(array('message' => 'success'));

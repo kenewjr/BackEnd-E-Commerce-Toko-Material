@@ -20,6 +20,8 @@
                     'nohp' => $data['nohp'],    
                 	'status' => $data['status'],
                     'alamat' => $data['alamat'],
+                    'kodepos' => $data['kodepos'],
+                    'kota' => $data['kota'],
                     'email' => $data['email']            
                 ));
             }

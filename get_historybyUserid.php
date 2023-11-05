@@ -20,14 +20,17 @@
                 'id_produk' => $data['id_produk'],
                 'order_id' => $data['order_id'],
                 'nama_pembeli' => $data['nama_pembeli'],
+            	'ongkos'     =>$data['ongkos'],
             	'alamat'       =>$data['alamat'],
                 'tgl_transaksi' => $data['tgl_transaksi'],
                 'nama_produk' => $data['nama_produk'],
                 'harga_produk' => $data['harga_produk'],
                 'total_harga' => $data['total_harga'],
                 'jumlah_produk' => $data['jumlah_produk'],
-                'gambar' => 'https://dev.vzcyberd.cloud/abrar/API/uploads/thumbnail_berita_' . $data['id_produk'] . '.jpg',
-                'status' => $data['status']
+                'gambar' => 'https://abrar.vzcyberd.my.id/API/uploads/thumbnail_berita_'. $data['id_produk'].'.jpg',
+                'status' => $data['status'],
+           		 'tujuan_rekening' => $data['tujuan_rekening'],
+            'nama_rekening' => $data['nama_rekening']
             ));
         }
         http_response_code(200);

@@ -7,7 +7,7 @@
 
         // checking username if already exist
 
-        $query_checking = $koneksi->query("SELECT * FROM `riwayat`");
+        $query_checking = $koneksi->query("SELECT * FROM `riwayat` ORDER BY `riwayat`.`tgl_transaksi` DESC");
 
         if($query_checking->num_rows > 0) {
             $data_list = array();
@@ -17,6 +17,7 @@
                     'id'             => $data['id'],
                     'id_user'             => $data['id_user'],
                     'id_produk'             => $data['id_produk'],
+                	'ongkos'     =>$data['ongkos'],
                 	'order_id'      =>$data['order_id'],
                 	'alamat'       =>$data['alamat'],
                     'nama_pembeli'             => $data['nama_pembeli'],
@@ -25,8 +26,10 @@
                     'harga_produk'             => $data['harga_produk'],
                     'total_harga'             => $data['total_harga'],
                     'jumlah_produk'             => $data['jumlah_produk'],
-                    'gambar'             => 'https://dev.vzcyberd.cloud/abrar/API/uploads/thumbnail_berita_'. $data['id_produk'].'.jpg',
+                    'gambar'             => 'https://abrar.vzcyberd.my.id/API/uploads/thumbnail_berita_'. $data['id_produk'].'.jpg',
                     'status'             => $data['status'],
+                	'tujuan_rekening' => $data['tujuan_rekening'],
+                	'nama_rekening' => $data['nama_rekening']
 
                 ));
             }

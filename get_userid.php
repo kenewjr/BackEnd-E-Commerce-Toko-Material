@@ -25,6 +25,8 @@
                		 'status' => $data['status'],
                     'nohp'     => $data['nohp'],
                     'alamat'   => $data['alamat'],
+                    'kota'   => $data['kota'],
+                    'kodepos'   => $data['kodepos'],
                     'email' => $data['email'],
                 ));
             } else {

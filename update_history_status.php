@@ -3,14 +3,14 @@
     require 'koneksi.php';
 
     header("Content-type: Application/json");
+   
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
-        $id = $_POST['id'];
-        $kendaraan = $_POST['kendaraan'];
-        $harga = $_POST['harga'];
-        $max_berat = $_POST['max_berat'];
 
-        $query_add = $koneksi->query("UPDATE pengiriman SET kendaraan = '$kendaraan', harga = '$harga', max_berat= '$max_berat' WHERE id = '$id'");
+    	$id = $_POST['id'];
+       	$status = $_POST ['status'];
+
+        $query_add = $koneksi->query("UPDATE `riwayat` SET status = '$status' WHERE id = '$id'");
 
         if($query_add) {
             http_response_code(200);

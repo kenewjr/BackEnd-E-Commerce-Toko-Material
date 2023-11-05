@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     'id_user' => $data['id_user'],
                     'id_produk' => $data['id_produk'],
                 	'order_id' => $data['order_id'],
+               		 'ongkos'     =>$data['ongkos'],
                     'nama_pembeli' => $data['nama_pembeli'],
                		'alamat'       =>$data['alamat'],
                     'tgl_transaksi' => $data['tgl_transaksi'],
@@ -24,8 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     'harga_produk' => $data['harga_produk'],
                     'total_harga' => $data['total_harga'],
                     'jumlah_produk' => $data['jumlah_produk'],
-                    'gambar' => 'https://dev.vzcyberd.cloud/abrar/API/uploads/thumbnail_berita_' . $data['id_produk'] . '.jpg',
-                    'status' => $data['status']
+                    'gambar' => 'https://abrar.vzcyberd.my.id/API/uploads/thumbnail_berita_'. $data['id_produk'].'.jpg',
+                    'status' => $data['status'],
+               		 'tujuan_rekening' => $data['tujuan_rekening'],
+                'nama_rekening' => $data['nama_rekening']
                 ));
             }
             http_response_code(200);

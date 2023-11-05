@@ -22,7 +22,7 @@
                 array_push($data_list, array(
                     'id'             => $data['id'],
                     'nama_produk'             => $data['nama_produk'],
-                    'gambar'         => 'https://dev.vzcyberd.cloud/abrar/API/uploads/thumbnail_berita_'. $data['id'].'.jpg', 
+                    'gambar'         => 'https://abrar.vzcyberd.my.id/API/uploads/thumbnail_berita_'. $data['id'].'.jpg', 
                     'deskripsi'                 => $data['deskripsi'],
                     'harga'                   => $data['harga'],
                     'kategori'              => $data_kategori['name'],
@@ -35,8 +35,11 @@
             http_response_code(200);
             echo json_encode($data_list);
         } else {
-            http_response_code(404);
-            echo json_encode(array('message' => 'data not found'));
+            http_response_code(200);
+            echo json_encode(array([]));
         }
+    }else{
+        http_response_code(404);
+        echo json_encode(array(['message' => 'error occurred']));
     }    
 ?>
