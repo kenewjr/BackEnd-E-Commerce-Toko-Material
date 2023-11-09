@@ -17,20 +17,20 @@
 
         // checking username if already exist
 
-        $query_checking = $koneksi->query("SELECT * FROM user WHERE username = '$username'");
+        $query_checking = $koneksi->query("SELECT * FROM user WHERE username = '$username' OR nohp = '$nohp' OR email '$email'");
 
         if($query_checking->num_rows > 0) {
             http_response_code(409);
-            echo json_encode(array('message' => 'username already exist'));
+            echo json_encode(array(['message' => 'Data Already Exist']));
         } else {
             $query = $koneksi->query("INSERT INTO `user` (`username`, `password`, `nama`,`nohp`,`alamat`,`kota`,`kodepos`,`email`,`date`,`status`) 
             VALUES ('$username','$password','$nama','$nohp','$alamat','$kota','$kodepos','$email','$dateNow','buyer')");
             if ($query) {
                 http_response_code(200);
-                echo json_encode(array('message' => 'success'));
+                echo json_encode(array(['message' => 'success']));
             } else {
                 http_response_code(500);
-                echo json_encode(array('message' => $koneksi->error));
+                echo json_encode(array(['message' => $koneksi->error]));
             } 
         }
     }    

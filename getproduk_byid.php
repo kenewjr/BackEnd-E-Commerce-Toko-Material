@@ -36,7 +36,9 @@
                         'stok'              => $data['stok'],
                         'create_at'              => $data['create_at'],
                         'update_at'              => $data['update_at'],
-                        'viewer'              => $data['viewer']
+                        'viewer'              => $data['viewer'],
+                    	'rating'    => $data['rating'],
+                    	'ratinguser'  => $data['ratinguser']
                     ));
                 }
             } else {
