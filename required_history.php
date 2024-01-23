@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id']) && isset($_GET['OR
         $mergedData = array_merge($externalData, array(
             'id' => $productData['id'],
             'nama_produk' => $productData['nama_produk'],
-            'gambar' => 'https://abrar.vzcyberd.my.id/API/uploads/thumbnail_berita_' . $productData['id'] . '.jpg',
+            'gambar' => $link_gambar . $productData['id'] . '.jpg',
             'deskripsi' => $productData['deskripsi'],
             'harga' => $productData['harga'],
             'berat' => $productData['berat'],

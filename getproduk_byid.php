@@ -27,7 +27,7 @@
                     echo json_encode(array(
                         'id'             => $data['id'],
                         'nama_produk'             => $data['nama_produk'],
-                        'gambar'         => 'https://abrar.vzcyberd.my.id/API/uploads/thumbnail_berita_'. $data['id'].'.jpg', 
+                        'gambar'         => $link_gambar. $data['id'].'.jpg', 
                         'deskripsi'                 => $data['deskripsi'],
                         'harga'                   => $data['harga'],
                     	'berat'			=>$data['berat'],

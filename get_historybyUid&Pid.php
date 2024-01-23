@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     'harga_produk' => $data['harga_produk'],
                     'total_harga' => $data['total_harga'],
                     'jumlah_produk' => $data['jumlah_produk'],
-                    'gambar' => 'https://abrar.vzcyberd.my.id/API/uploads/thumbnail_berita_'. $data['id_produk'].'.jpg',
+                    'gambar' => $link_gambar. $data['id_produk'].'.jpg',
                     'status' => $data['status'],
                		 'tujuan_rekening' => $data['tujuan_rekening'],
                 'nama_rekening' => $data['nama_rekening']
