@@ -2,7 +2,9 @@
     header("Content-type: Application/json");
     
     require 'koneksi.php';
-
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
     if($_SERVER['REQUEST_METHOD']=='POST'){
 
         $username = $_POST['username'];
@@ -17,7 +19,7 @@
 
         // checking username if already exist
 
-        $query_checking = $koneksi->query("SELECT * FROM user WHERE username = '$username' OR nohp = '$nohp' OR email '$email'");
+        $query_checking = $koneksi->query("SELECT * FROM user WHERE username = '$username' OR nohp = '$nohp' OR email = '$email'");
 
         if($query_checking->num_rows > 0) {
             http_response_code(409);

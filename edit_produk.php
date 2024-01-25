@@ -16,7 +16,7 @@
     
     	$uploadedFile = $_FILES['gambar']['tmp_name'];
 		$filename = $_FILES['gambar']['name'];
-		$uploadDirectory = 'uploads/thumbnail_berita_'.$id_produk.'.jpg'; 
+		$uploadDirectory = 'uploads/thumbnail_produk_'.$id_produk.'.jpg'; 
     	unlink(getcwd().'/'.$uploadDirectory);
     	move_uploaded_file($uploadedFile, $uploadDirectory);
     	$query = $koneksi->query("UPDATE produk SET nama_produk = '$nama_produk', berat = '$berat', deskripsi = '$deskripsi', kategori_produk = '$kategori_produk', update_at = '$update_at', stok= '$stok', harga = '$harga', gambar = '$uploadedFile' WHERE id = '$id_produk'");

@@ -3,6 +3,7 @@
     
     require 'koneksi.php';
 
+
     if($_SERVER['REQUEST_METHOD']=='GET'){
 
         // checking username if already exist

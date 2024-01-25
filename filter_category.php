@@ -21,17 +21,19 @@
                     $data_kategori = $query_kategori->fetch_assoc();
 
                     array_push($data_list, array(
-                        'id'             => $data['id'],
-                        'nama_produk'    => $data['nama_produk'],
-                        'gambar'         => $link_gambar. $data['id'].'.jpg', 
-                        'deskripsi'      => $data['deskripsi'],
-                        'harga'          => $data['harga'],
-                        'berat'          => $data['berat'],
-                        'kategori'       => $data_kategori['name'],
-                        'stok'           => $data['stok'],
-                        'create_at'      => $data['create_at'],
-                        'update_at'      => $data['update_at'],
-                        'viewer'         => $data['viewer'],
+                    'id' => $data['id'],
+                    'nama_produk' => $data['nama_produk'],
+                    'gambar' => $link_gambar . $data['id'] . '.jpg',
+                    'deskripsi' => $data['deskripsi'],
+                    'harga' => $data['harga'],
+                    'berat' => $data['berat'],
+                    'kategori' => $data_kategori['name'],
+                    'stok' => $data['stok'],
+                    'create_at' => $data['create_at'],
+                    'update_at' => $data['update_at'],
+                    'viewer' => $data['viewer'],
+            	    'rating'    => $data['rating'],
+                    'ratinguser'  => $data['ratinguser']
                     ));
                 }
                 http_response_code(200);

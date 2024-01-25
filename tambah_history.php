@@ -3,7 +3,6 @@
     require 'koneksi.php';
 
     header("Content-type: Application/json");
-   
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
 
@@ -21,9 +20,10 @@
         $gambar = $_POST['gambar'];
     	$rekening = $_POST['tujuan_rekening'];
     	$namarek = $_POST['nama_rekening'];
+    	$dibaca = $_POST['dibaca'];
 
-        $query_add = $koneksi->query("INSERT INTO `riwayat` (`id_user`, `id_produk`,`order_id`,`ongkos`, `nama_pembeli`,`alamat`, `tgl_transaksi`, `nama_produk`, `harga_produk`, `total_harga`, `jumlah_produk`, `gambar`, `status`, `tujuan_rekening`,`nama_rekening`)
-         VALUES ('$id_user','$id_produk','$order_id','$ongkos', '$nama_pembeli','$alamat', '$tgl_transaksi', '$nama_produk', '$harga_produk', '$total_harga', '$jumlah_produk','$gambar', 'pending','$rekening','$namarek')");
+        $query_add = $koneksi->query("INSERT INTO `riwayat` (`id_user`, `id_produk`,`order_id`,`ongkos`, `nama_pembeli`,`alamat`, `tgl_transaksi`, `nama_produk`, `harga_produk`, `total_harga`, `jumlah_produk`, `gambar`, `status`, `tujuan_rekening`,`nama_rekening`,`dibaca`)
+         VALUES ('$id_user','$id_produk','$order_id','$ongkos', '$nama_pembeli','$alamat', '$tgl_transaksi', '$nama_produk', '$harga_produk', '$total_harga', '$jumlah_produk','$gambar', 'pending','$rekening','$namarek','belum')");
 
         if($query_add) {
             http_response_code(200);

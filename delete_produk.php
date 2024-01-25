@@ -9,7 +9,7 @@
 
       if ($delete == "produk") {
             $id_produk = $_POST['id'];
-            $files = getcwd().'/uploads/thumbnail_berita_'.$id_produk.'.jpg';
+            $files = getcwd().'/uploads/thumbnail_produk_'.$id_produk.'.jpg';
             if (unlink($files)) {                
                 $query = $koneksi->query("DELETE FROM produk WHERE id = '$id_produk'");
                 if ($query) {
